@@ -8,3 +8,14 @@ body {
 .fade-enter, .fade-leave-to {
 	opacity: 0;
 }
+
+.move-enter-active, .move-leave-active {
+	transition: opacity .2s, transform .2s;
+}
+.move-enter, .move-leave-to {
+	opacity: 0;
+	transform: translateX(-20px);
+}
+.move-leave, .move-enter-to {
+	transform: translateX(20px);
+}
