@@ -96,6 +96,10 @@
   version "0.2.6"
   resolved "https://registry.yarnpkg.com/@firebase/webchannel-wrapper/-/webchannel-wrapper-0.2.6.tgz#a4b81ca8cdeb1acbc7923289a4a514f61b59db86"
 
+"@oswaldlabs/agastya@^1.0.2":
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/@oswaldlabs/agastya/-/agastya-1.0.2.tgz#a7db645ea1d36aef6758dd41ab2855b19c7e15b5"
+
 "@types/node@*":
   version "9.4.7"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-9.4.7.tgz#57d81cd98719df2c9de118f2d5f3b1120dcd7275"

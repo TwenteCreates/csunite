@@ -22,6 +22,9 @@ Vue.use(VueGoogleMaps, {
 	}
 });
 
+// import "@oswaldlabs/agastya";
+// window.a11ySettings = { token: "5rlsghx", bottom: 75 };
+
 Vue.use(VueRouter);
 const router = new VueRouter({
 	routes,
