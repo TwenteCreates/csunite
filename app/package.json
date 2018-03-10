@@ -1,0 +1,19 @@
+{
+  "main": "index.js",
+  "devDependencies": {
+    "node-sass": "^4.7.2",
+    "offline-plugin": "^4.9.0",
+    "poi": "^9.6.13",
+    "sass-loader": "^6.0.6"
+  },
+  "dependencies": {
+    "babel-polyfill": "^6.26.0",
+    "firebase": "^4.10.1",
+    "vue": "^2.5.14",
+    "vue-router": "^3.0.1",
+    "vue-toasted": "^1.1.24",
+    "vue2-google-maps": "^0.8.8",
+    "vuetify": "^1.0.5",
+    "whatwg-fetch": "^2.0.3"
+  }
+}

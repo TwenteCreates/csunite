@@ -1,3 +1,6 @@
+# Compiled files
+/app/dist/
+
 # Logs
 logs
 *.log
