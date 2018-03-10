@@ -1,18 +1,21 @@
 <template>
 	<div>
-		<div class="headline text-xs-center pa-5">Active: {{ activeElt }}</div>
-		<v-bottom-nav absolute :value="true" :active.sync="activeElt" color="transparent">
-			<v-btn flat color="teal" value="recent">
-				<span>Recent</span>
-				<v-icon>history</v-icon>
+		<v-bottom-nav absolute :value="true" :active.sync="activeElt" color="white">
+			<v-btn to="/" flat color="teal" value="learn">
+				<span>Learn</span>
+				<v-icon>assignment</v-icon>
 			</v-btn>
-			<v-btn flat color="teal" value="favorites">
-				<span>Favorites</span>
-				<v-icon>favorite</v-icon>
+			<v-btn to="/requests" flat color="teal" value="requests">
+				<span>Requests</span>
+				<v-icon>work</v-icon>
 			</v-btn>
-			<v-btn flat color="teal" value="nearby">
-				<span>Nearby</span>
-				<v-icon>place</v-icon>
+			<v-btn to="/community" flat color="teal" value="community">
+				<span>Community</span>
+				<v-icon>question_answer</v-icon>
+			</v-btn>
+			<v-btn to="/profile" flat color="teal" value="profile">
+				<span>Profile</span>
+				<v-icon>face</v-icon>
 			</v-btn>
 		</v-bottom-nav>
 		</div>
@@ -22,7 +25,7 @@
 	export default {
 		data () {
 			return {
-				activeElt: "recent"
+				activeElt: "learn"
 			}
 		}
 	}
