@@ -22,8 +22,8 @@ Vue.use(VueGoogleMaps, {
 	}
 });
 
-// import "@oswaldlabs/agastya";
-// window.a11ySettings = { token: "5rlsghx", bottom: 75 };
+import "@oswaldlabs/agastya";
+window.a11ySettings = { token: "5rlsghx", bottom: 75 };
 
 Vue.use(VueRouter);
 const router = new VueRouter({
@@ -41,6 +41,15 @@ const router = new VueRouter({
 		})
 	}
 });
+router.afterEach((to, from) => {
+	if (document.querySelectorAll("#abc9c1elt").length > 0) {
+		if (to.path === "/inclusion") {
+			document.querySelector("#abc9c1elt").style.display = "block";
+		} else {
+			document.querySelector("#abc9c1elt").style.display = "none";
+		}
+	}
+})
 
 // App
 const app = new Vue({

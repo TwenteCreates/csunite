@@ -1,6 +1,7 @@
 import Home from "../components/pages/Home.vue";
 import Requests from "../components/pages/Requests.vue";
 import Community from "../components/pages/Community.vue";
+import Inclusion from "../components/pages/Inclusion.vue";
 import Error404 from "../components/pages/Error404.vue";
 const routes = [
 	{
@@ -22,6 +23,13 @@ const routes = [
 		component: Community,
 		meta: {
 			title: "Community"
+		}
+	},
+	{
+		path: "/inclusion",
+		component: Inclusion,
+		meta: {
+			title: "Inclusion"
 		}
 	},
 	{

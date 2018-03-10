@@ -17,16 +17,18 @@
 					<div>Talk to experienced cleaning professionals, find people in your community, and connect with coworkers, with complete data privacy.</div>
 				</v-card-title>
 			</v-card>
-			<div class="mt-4">
+			<div class="mt-4" style="margin-bottom: 112px">
 				<div v-for="message in messages" :key="message.id">
 					<div class="message mine" v-if="message.from === 'me'">
 						<span>{{message.text}}</span>
 					</diV>
 					<div class="message" v-else>
-						<v-avatar size="36px" slot="activator">
+						<v-avatar size="36px" slot="activator" style="float: left">
 							<img :src="'https://tse2.mm.bing.net/th?q=' + encodeURIComponent(message.from) + '&w=30&h=30&p=0&dpr=2&adlt=moderate&c=1'" alt="">
 						</v-avatar>
-						<span :style="message.from === 'bot icon flat' ? 'background: #455B64; color: #fff' : ''"><strong v-if="message.from === 'bot icon flat'">Announcement: </strong>{{message.text}}</span>
+						<div style="float: right; width: calc(100% - 50px)">
+							<span :style="message.from === 'bot icon flat' ? 'background: #455B64; color: #fff' : ''"><strong v-if="message.from === 'bot icon flat'">Announcement: </strong>{{message.text}}</span>
+						</div>
 					</diV>
 				</div>
 			</div>
