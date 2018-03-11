@@ -1,6 +1,8 @@
 <template>
 	<div>
-		<gmap-map v-bind:options="mapStyle" :center="{lat: 47.609526517418864, lng: -122.13}" :zoom="13" map-type-id="roadmap" class="bg-map" />
+		<gmap-map v-bind:options="mapStyle" :center="center" :zoom="13" map-type-id="roadmap" class="bg-map">
+			<google-marker :position="center" :clickable="true" :draggable="true" @click="center=center"></google-marker>
+		</gmap-map>
 		<v-card style="background: #fff" ref="card">
 			<v-card-media src="https://via.placeholder.com/400x200" height="125px">
 			</v-card-media>
@@ -23,6 +25,8 @@
 </template>
 
 <script>
+	import Vue from "vue";
+	Vue.component("google-marker", google-marker);
 	import router from "../../modules/router";
 	export default {
 		data: () => {
@@ -36,6 +40,10 @@
 					time: "8 pm today",
 					distance: "7 km",
 					leaveIn: "23 mins"
+				},
+				center: {
+					lat: 47.609526517418864,
+					lng: -122.13
 				},
 				show: true,
 				sent: false,

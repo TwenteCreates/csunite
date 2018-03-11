@@ -1,6 +1,6 @@
 {
-    "name": "APPNAME",
-    "short_name": "APPNAME",
+    "name": "CSUnite",
+    "short_name": "CSUnite",
     "icons": [
         {
             "src": "/android-chrome-36x36.png",

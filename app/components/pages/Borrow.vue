@@ -31,7 +31,7 @@
 							</v-avatar>
 						</v-list-tile-avatar>
 						<v-list-tile-content>
-							<v-list-tile-title>CSU partner location</v-list-tile-title>
+							<v-list-tile-title>Texaco (CSU partner)</v-list-tile-title>
 							<v-list-tile-sub-title>9 min (4.2 km)</v-list-tile-sub-title>
 						</v-list-tile-content>
 					</v-list-tile>
