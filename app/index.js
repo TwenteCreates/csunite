@@ -1,11 +1,10 @@
 import Vue from "vue";
-import VueRouter from "vue-router";
 import Vuetify from "vuetify";
-import routes from "./modules/router.js";
 import Nav from "./components/Nav.vue";
 import css from "./assets/app.scss";
 import * as VueGoogleMaps from "vue2-google-maps";
 import "babel-polyfill";
+import router from "./modules/router";
 import "vuetify/dist/vuetify.min.css";
 
 Vue.use(Vuetify);
@@ -24,32 +23,6 @@ Vue.use(VueGoogleMaps, {
 
 import "@oswaldlabs/agastya";
 window.a11ySettings = { token: "5rlsghx", bottom: 75 };
-
-Vue.use(VueRouter);
-const router = new VueRouter({
-	routes,
-	mode: "history",
-	scrollBehavior(to, from, savedPosition) {
-		const position = savedPosition || {
-			x: 0,
-			y: 0
-		}
-		return new Promise((resolve, reject) => {
-			setTimeout(() => {
-				resolve({ x: 0, y: 0 });
-			}, 200);
-		})
-	}
-});
-router.afterEach((to, from) => {
-	if (document.querySelectorAll("#abc9c1elt").length > 0) {
-		if (to.path === "/inclusion") {
-			document.querySelector("#abc9c1elt").style.display = "block";
-		} else {
-			document.querySelector("#abc9c1elt").style.display = "none";
-		}
-	}
-})
 
 // App
 const app = new Vue({

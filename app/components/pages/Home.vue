@@ -14,13 +14,13 @@
 			<v-layout row wrap>
 				<v-flex xs6>
 					<v-avatar size="75" class="orange">
-						<v-icon x-large dark>security</v-icon>
+						<v-icon x-large light>security</v-icon>
 					</v-avatar>
 					<p class="mt-3">Level 5</p>
 				</v-flex>
 				<v-flex xs6>
 					<v-avatar size="75" class="indigo">
-						<v-icon x-large dark>star</v-icon>
+						<v-icon x-large light>star</v-icon>
 					</v-avatar>
 					<p class="mt-3">4.3/5</p>
 				</v-flex>

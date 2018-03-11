@@ -16,13 +16,14 @@
 			</v-card-title>
 			<v-card-actions>
 				<v-btn flat color="grey" v-on:click="updateRequest"><v-icon class="mr-2">close</v-icon>Decline</v-btn>
-				<v-btn flat color="teal"><v-icon class="mr-2">check</v-icon>Accept for €{{Math.floor(Math.random() * 40) + 40}}</v-btn>
+				<v-btn flat color="teal" v-on:click="acceptRequest"><v-icon class="mr-2">check</v-icon>Accept for €{{Math.floor(Math.random() * 40) + 40}}</v-btn>
 			</v-card-actions>
 		</v-card>
 	</div>
 </template>
 
 <script>
+	import router from "../../modules/router";
 	export default {
 		data: () => {
 			return {
@@ -39,6 +40,11 @@
 				show: true,
 				sent: false,
 				error: null
+			}
+		},
+		mounted() {
+			if (localStorage.getItem("request")) {
+				router.push("/accept");
 			}
 		},
 		methods: {
@@ -62,6 +68,10 @@
 						this.$refs.card.$el.classList.remove("move-leave");
 					}, 300);
 				}, 300);
+			},
+			acceptRequest() {
+				localStorage.setItem("request", JSON.stringify(this.request));
+				router.push("/accept");
 			}
 		}
 	}
