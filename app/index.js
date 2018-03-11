@@ -1,5 +1,6 @@
 import Vue from "vue";
 import Vuetify from "vuetify";
+import Toasted from "vue-toasted";
 import Nav from "./components/Nav.vue";
 import css from "./assets/app.scss";
 import * as VueGoogleMaps from "vue2-google-maps";
@@ -8,6 +9,7 @@ import router from "./modules/router";
 import "vuetify/dist/vuetify.min.css";
 
 Vue.use(Vuetify);
+Vue.use(Toasted);
 
 // Progressive Web App support
 if (process.env.NODE_ENV === "production") {
@@ -33,6 +35,13 @@ const app = new Vue({
 	mounted() {
 	},
 	methods: {
+		toast(text) {
+			this.$toasted.show(text, {
+				theme: "primary",
+				position: "top-center",
+				duration: 3000
+			});
+		}
 	},
 	render() {
 		return <div>

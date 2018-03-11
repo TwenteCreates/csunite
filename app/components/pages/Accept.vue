@@ -88,7 +88,7 @@
 					<v-toolbar-title style="color:#fff">Complete</v-toolbar-title>
 					<v-spacer></v-spacer>
 					<v-toolbar-items>
-						<v-btn flat @click.native="dialog = false">
+						<v-btn flat @click.native="complete">
 							<v-icon left>save</v-icon>
 							Save
 						</v-btn>
@@ -103,7 +103,7 @@
 								<v-list-tile-sub-title>To mark this project as completed, click a photo of the room you just cleaned and attach it here:</v-list-tile-sub-title>
 							</v-list-tile-content>
 						</v-list-tile>
-						<VueUploadcare />
+						<VueUploadcare :url.sync="photoUrl" />
 					</v-list>
 					<v-divider></v-divider>
 				</v-card-text>
@@ -116,10 +116,12 @@
 <script>
 	import router from "../../modules/router";
 	import VueUploadcare from "vue-uploadcare";
+	window.UPLOADCARE_PUBLIC_KEY = "b84367cf8636092ee2f9";
 	export default {
 		data: () => {
 			return {
 				response: {},
+				photoUrl: "",
 				dialog: false
 			}
 		},
@@ -136,11 +138,13 @@
 				let c = confirm("Are you sure you want to cancel your response? This might reduce your rating.");
 				if (c) {
 					localStorage.removeItem("request");
+					this.$root.toast("We've cancelled your response.");
 					router.push("/requests");
 				}
 			},
 			complete() {
 				localStorage.removeItem("request");
+				this.$root.toast("Good job!");
 				router.push("/requests");
 			}
 		}
