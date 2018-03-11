@@ -1,5 +1,6 @@
 body {
 	font-family: "Roboto";
+	padding-bottom: 54px;
 }
 
 .fade-enter-active, .fade-leave-active {
@@ -19,4 +20,13 @@ body {
 
 #abc9c1elt {
 	display: none;
+}
+
+.theme--light {
+	color: #fff;
+}
+
+.bottom-nav {
+	position: fixed !important;
+	bottom: 0 !important;
 }
