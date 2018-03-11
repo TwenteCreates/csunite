@@ -1,7 +1,7 @@
 <template>
 	<div>
 		<gmap-map v-bind:options="mapStyle" :center="center" :zoom="13" map-type-id="roadmap" class="bg-map">
-			<google-marker :position="center" :clickable="true" :draggable="true" @click="center=center"></google-marker>
+			<gmap-marker :position="center2" :clickable="true" :draggable="true" @click="center=center2"></gmap-marker>
 		</gmap-map>
 		<v-card style="background: #fff" ref="card">
 			<v-card-media src="https://via.placeholder.com/400x200" height="125px">
@@ -26,7 +26,6 @@
 
 <script>
 	import Vue from "vue";
-	Vue.component("google-marker", google-marker);
 	import router from "../../modules/router";
 	export default {
 		data: () => {
@@ -42,8 +41,12 @@
 					leaveIn: "23 mins"
 				},
 				center: {
-					lat: 47.609526517418864,
-					lng: -122.13
+					lat: 51.439589,
+					lng: 5.469528
+				},
+				center2: {
+					lat: 51.439589 + 0.0205,
+					lng: 5.469528
 				},
 				show: true,
 				sent: false,
@@ -71,6 +74,12 @@
 					this.request.distance = ([0, 1, 2][Math.floor(Math.random() * 3)] || "") + parseInt(Math.random()*10) + " km";
 					let n = parseInt(Math.random()*100);
 					this.request.leaveIn = n > 60 ? n - 60 : n;
+					let a = 51.439589, b = 5.469528;
+					a += Math.random()*100/1000, b += Math.random()*100/1000;
+					this.center.lat = a;
+					this.center.lng = b;
+					this.center2.lat = a + 0.0205;
+					this.center2.lng = b;
 					setTimeout(() => {
 						this.$refs.card.$el.classList.remove("move-leave-active");
 						this.$refs.card.$el.classList.remove("move-leave");
