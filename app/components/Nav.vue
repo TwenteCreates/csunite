@@ -13,7 +13,7 @@
 				<span>Community</span>
 				<v-icon>question_answer</v-icon>
 			</v-btn>
-			<v-btn to="/Profile" flat color="teal" value="profile">
+			<v-btn to="/profile" flat color="teal" value="profile">
 				<span>Profile</span>
 				<v-icon>face</v-icon>
 			</v-btn>

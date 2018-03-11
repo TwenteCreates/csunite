@@ -7,9 +7,7 @@ import * as VueGoogleMaps from "vue2-google-maps";
 import "babel-polyfill";
 import router from "./modules/router";
 import "vuetify/dist/vuetify.min.css";
-import {HeartRating} from 'vue-rate-it';
 
-Vue.component('heart-rating', HeartRating);
 Vue.use(Vuetify);
 Vue.use(Toasted);
 

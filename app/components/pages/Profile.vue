@@ -13,7 +13,8 @@
 					<v-avatar size="100" class="grey lighten-4">
 						<img src="https://randomuser.me/api/portraits/women/24.jpg" alt="">
 					</v-avatar>
-					<div class="mt-4 mb-4">
+					<h2 class="mt-3">Leslie Knope</h2>
+					<div class="mt-2 mb-4 amber--text">
 						<v-icon>star</v-icon>
 						<v-icon>star</v-icon>
 						<v-icon>star</v-icon>
@@ -22,6 +23,7 @@
 					</div>
 				</div>
 				<v-container fluid style="min-height: 0;" grid-list-lg>
+					<div class="subtitle mb-1">My Awards</div>
 					<v-layout row wrap>
 						<v-flex xs12>
 							<v-card color="cyan darken-2" class="white--text">
@@ -30,7 +32,7 @@
 										<v-flex xs7>
 											<div>
 												<div class="headline">The Vaccum Queen </div>
-												<div>February 2018</div>
+												<div class="mt-2">February 2018</div>
 											</div>
 										</v-flex>
 										<v-flex xs5>
@@ -51,7 +53,7 @@
 										<v-flex xs7>
 											<div>
 												<div class="headline">Best CSU Cleaner Award</div>
-												<div>September 2017</div>
+												<div class="mt-2">September 2017</div>
 											</div>
 										</v-flex>
 										<v-flex xs5>
@@ -71,9 +73,3 @@
 		</v-layout>
 	</div>
 </template>
-
-<style scoped>
-star-rating{
-	font-size: 0.5em;
-}
-</style>
