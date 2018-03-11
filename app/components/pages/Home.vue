@@ -53,7 +53,7 @@
 								</v-flex>
 								<v-flex xs5>
 									<v-card-media
-											src="/assets/001-vacuum-cleaner.svg"
+											src="/001-vacuum-cleaner.svg"
 											height="90px"
 											contain
 								></v-card-media>
@@ -74,7 +74,7 @@
 								</v-flex>
 								<v-flex xs5>
 									<v-card-media
-											src="/assets/kitchen.png"
+											src="/kitchen.png"
 											height="90px"
 											contain
 								></v-card-media>
@@ -95,7 +95,7 @@
 								</v-flex>
 								<v-flex xs5>
 									<v-card-media
-											src="/assets/flask.png"
+											src="/flask.png"
 											height="85px"
 											contain
 								></v-card-media>

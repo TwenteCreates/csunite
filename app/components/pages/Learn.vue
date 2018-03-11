@@ -52,7 +52,7 @@
 						desc: "It gets very interesting on Level 6 — learn more about vacuum cleaners and how to best use them.",
 						color: "cyan darken-2",
 						text: "white",
-						img: "/assets/001-vacuum-cleaner.svg",
+						img: "/001-vacuum-cleaner.svg",
 						progress: 76,
 						url: "https://www.youtube.com/embed/i3u27-oJzBY",
 						subtitles: [
@@ -97,7 +97,7 @@
 						desc: "Master your skills in cleaning kitchens for restaurants and hotels in this 5-part course.",
 						color: "yellow accent-4",
 						text: "black",
-						img: "/assets/kitchen.png",
+						img: "/kitchen.png",
 						progress: 43,
 						url: "https://www.youtube.com/embed/Vos3br2docY",
 						subtitles: [
@@ -283,7 +283,7 @@
 						desc: "All you need to know about microfiber cloths and how to best use them in this short course.",
 						color: "deep-purple",
 						text: "white",
-						img: "/assets/flask.png",
+						img: "/flask.png",
 						progress: 0,
 						url: "https://www.youtube.com/embed/PUNqsX8hlU8",
 						subtitles: [
