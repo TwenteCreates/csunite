@@ -15,6 +15,7 @@
     "vue-toasted": "^1.1.24",
     "vue2-google-maps": "^0.8.8",
     "vuetify": "^1.0.5",
-    "whatwg-fetch": "^2.0.3"
+    "whatwg-fetch": "^2.0.3",
+    "vue-rate-it": "^2.1.0"
   }
 }

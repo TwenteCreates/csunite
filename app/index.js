@@ -7,7 +7,9 @@ import css from "./assets/app.scss";
 import * as VueGoogleMaps from "vue2-google-maps";
 import "babel-polyfill";
 import "vuetify/dist/vuetify.min.css";
+import {HeartRating} from 'vue-rate-it';
 
+Vue.component('heart-rating', HeartRating);
 Vue.use(Vuetify);
 
 // Progressive Web App support
