@@ -3,6 +3,7 @@ import VueRouter from "vue-router";
 import Home from "../components/pages/Home.vue";
 import Requests from "../components/pages/Requests.vue";
 import Community from "../components/pages/Community.vue";
+import Borrow from "../components/pages/Borrow.vue";
 import Inclusion from "../components/pages/Inclusion.vue";
 import Accept from "../components/pages/Accept.vue";
 import Error404 from "../components/pages/Error404.vue";
@@ -26,6 +27,13 @@ const routes = [
 		component: Community,
 		meta: {
 			title: "Community"
+		}
+	},
+	{
+		path: "/borrow",
+		component: Borrow,
+		meta: {
+			title: "Borrow"
 		}
 	},
 	{

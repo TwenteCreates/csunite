@@ -67,12 +67,49 @@
 					<v-list-tile-sub-title>Time to leave in</v-list-tile-sub-title>
 				</v-list-tile-content>
 			</v-list-tile>
+			<v-divider :inset="true" style="background: #ddd" />
+			<v-list-tile avatar class="mt-3">
+				<v-list-tile-avatar>
+					<v-avatar class="teal">
+						<v-icon light>near_me</v-icon>
+					</v-avatar>
+				</v-list-tile-avatar>
+				<v-list-tile-content>
+					<v-btn href="https://goo.gl/maps/SxX8ywHs2kJ2" target="_blank">
+						Start navigation
+					</v-btn>
+				</v-list-tile-content>
+			</v-list-tile>
+			<v-list-tile avatar>
+				<v-list-tile-avatar>
+					<v-avatar class="teal">
+						<v-icon light>build</v-icon>
+					</v-avatar>
+				</v-list-tile-avatar>
+				<v-list-tile-content>
+					<v-btn to="/borrow">
+						Borrow equipment
+					</v-btn>
+				</v-list-tile-content>
+			</v-list-tile>
+			<v-list-tile avatar>
+				<v-list-tile-avatar>
+					<v-avatar class="teal">
+						<v-icon light>close</v-icon>
+					</v-avatar>
+				</v-list-tile-avatar>
+				<v-list-tile-content>
+					<v-btn @click="cancel">
+						Cancel response
+					</v-btn>
+				</v-list-tile-content>
+			</v-list-tile>
 		</v-list>
-		<div class="text-xs-center">
-			<v-btn color="red" light @click="cancel">
+		<!-- <div class="text-xs-center">
+			<v-btn color="teal" light @click="cancel">
 				<v-icon left>close</v-icon>Cancel response
 			</v-btn>
-		</div>
+		</div> -->
 		<v-dialog
 			fullscreen
 			transition="dialog-bottom-transition"

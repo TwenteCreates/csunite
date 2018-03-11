@@ -10,14 +10,14 @@
 				<v-icon>more_vert</v-icon>
 			</v-btn>
 		</v-toolbar>
-		 <v-container>
+		<v-container>
 			<v-card color="blue-grey darken-2" class="white--text">
 				<v-card-title primary-title>
 					<div class="headline mb-2" style="margin-top: -10px">Welcome to the CSU community!</div>
 					<div>Talk to experienced cleaning professionals, find people in your community, and connect with coworkers, with complete data privacy.</div>
 				</v-card-title>
 			</v-card>
-			<div class="mt-4" style="margin-bottom: 112px">
+			<div class="mt-4" style="margin-bottom: 56px">
 				<div v-for="message in messages" :key="message.id">
 					<div class="message mine" v-if="message.from === 'me'">
 						<span>{{message.text}}</span>
