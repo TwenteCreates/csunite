@@ -13,10 +13,6 @@
 				<span>Community</span>
 				<v-icon>question_answer</v-icon>
 			</v-btn>
-			<v-btn to="/inclusion" flat color="teal" value="inclusion">
-				<span>Inclusion</span>
-				<v-icon>accessibility</v-icon>
-			</v-btn>
 			<v-btn to="/Profile" flat color="teal" value="profile">
 				<span>Profile</span>
 				<v-icon>face</v-icon>

@@ -1,6 +1,12 @@
+html {
+	background: #eee;
+}
+
 body {
 	font-family: "Roboto";
 	padding-bottom: 54px;
+	max-width: 600px;
+	background: #fff;
 }
 
 .fade-enter-active, .fade-leave-active {
