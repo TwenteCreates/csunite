@@ -38,7 +38,7 @@
 				</v-flex>
 			</v-layout>
 		</v-container>
-		<v-container fluid style="min-height: 0;" grid-list-lg>
+		<v-container fluid style="min-height: 0;" grid-list-lg class="recommendations">
 			<div class="subtitle mb-1">Recommendations</div>
 			<v-layout row wrap>
 				<v-flex xs12>
@@ -46,14 +46,14 @@
 						<v-container fluid grid-list-lg>
 							<v-layout row>
 								<v-flex xs7>
-									<div>
+									<router-link to="/learn/vacuum">
 										<div class="headline">Vacuum Essentials Level 6</div>
 										<div class="mt-2">76% complete, 2:23 to go.</div>
-									</div>
+									</router-link>
 								</v-flex>
 								<v-flex xs5>
 									<v-card-media
-											src="assets/001-vacuum-cleaner.svg"
+											src="/assets/001-vacuum-cleaner.svg"
 											height="90px"
 											contain
 								></v-card-media>
@@ -67,14 +67,14 @@
 						<v-container fluid grid-list-lg>
 							<v-layout row>
 								<v-flex xs7>
-									<div>
+									<router-link to="/learn/kitchen">
 										<div class="headline">Kitchen Chemistry</div>
 										<div class="mt-2">Master your skills in cleaning kitchens for restaurants and hotels in this 5-part course.</div>
-									</div>
+									</router-link>
 								</v-flex>
 								<v-flex xs5>
 									<v-card-media
-											src="assets/kitchen.png"
+											src="/assets/kitchen.png"
 											height="90px"
 											contain
 								></v-card-media>
@@ -88,14 +88,14 @@
 						<v-container fluid grid-list-lg>
 							<v-layout row>
 								<v-flex xs7>
-									<div>
+									<router-link to="/learn/microfiber">
 										<div class="headline">Microfiber, Macropower</div>
 										<div class="mt-2">All you need to know in 10 mins.</div>
-									</div>
+									</router-link>
 								</v-flex>
 								<v-flex xs5>
 									<v-card-media
-											src="assets/flask.png"
+											src="/assets/flask.png"
 											height="85px"
 											contain
 								></v-card-media>
@@ -110,5 +110,8 @@
 </template>
 
 <style scoped>
-
+	.recommendations a {
+		color: inherit;
+		text-decoration: none;
+	}
 </style>

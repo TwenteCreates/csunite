@@ -1,6 +1,7 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 import Home from "../components/pages/Home.vue";
+import Learn from "../components/pages/Learn.vue";
 import Requests from "../components/pages/Requests.vue";
 import Community from "../components/pages/Community.vue";
 import Borrow from "../components/pages/Borrow.vue";
@@ -56,6 +57,13 @@ const routes = [
 		component: Accept,
 		meta: {
 			title: "Accept"
+		}
+	},
+	{
+		path: "/learn/:course",
+		component: Learn,
+		meta: {
+			title: "Learn"
 		}
 	},
 	{
