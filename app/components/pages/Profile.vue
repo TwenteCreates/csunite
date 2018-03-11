@@ -37,7 +37,7 @@
 										</v-flex>
 										<v-flex xs5>
 											<v-card-media
-													src="assets/001-vacuum-cleaner.svg"
+													src="/001-vacuum-cleaner.svg"
 													height="90px"
 													contain
 										></v-card-media>
@@ -58,7 +58,7 @@
 										</v-flex>
 										<v-flex xs5>
 											<v-card-media
-													src="assets/medal.png"
+													src="/medal.png"
 													height="90px"
 													contain
 										></v-card-media>
