@@ -4,7 +4,7 @@
 			<gmap-marker :position="center2" :clickable="true" :draggable="true" @click="center=center2"></gmap-marker>
 		</gmap-map>
 		<v-card style="background: #fff" ref="card">
-			<v-card-media src="https://via.placeholder.com/400x200" height="125px">
+			<v-card-media :src="imageURL" height="125px">
 			</v-card-media>
 			<v-card-title primary-title>
 				<div>
@@ -27,6 +27,7 @@
 <script>
 	import Vue from "vue";
 	import router from "../../modules/router";
+	let image = 1;
 	export default {
 		data: () => {
 			return {
@@ -50,36 +51,47 @@
 				},
 				show: true,
 				sent: false,
-				error: null
+				error: null,
+				imageURL: null
 			}
 		},
 		mounted() {
 			if (localStorage.getItem("request")) {
 				router.push("/accept");
+			} else {
+				this.changeValues();
 			}
 		},
 		methods: {
-			updateRequest() {
+			changeValues() {
+				if (image > 11) {
+					image = 1;
+				}
 				let firstNames = ["Lisa", "Jan", "Anne", "David", "Julia", "Lars", "Sanne", "Max", "Laura", "Jesse", "Emma", "Daniël", "Fleur", "Tim", "Tessa", "Stan", "Merel", "Rick", "Kirsten", "Nick"],
 				lastNames = ["Baas", "Bakker", "van Beek", "van der Bijl", "Bos", "van der Berg", "de Boer", "Boswel", "van der Boor", "Braam", "Brouwer", "de (Bruijn Bruin", "van Buskirk", "van der Byl", "van Coevorden", "Citroen", "Cornelissen", "Dekker", "Deijck Dijk", "Dijkstra", "de Graaf", "de Groot", "de Haan", "de Haas", "Hendriksen Hendriks", "van den Heuvel", "Hoebeek Hoebee", "van het Hoff", "van der Kleij", "van Leeuwen", "de Jaager", "Janssen Jansen", "de Jong", "Koningh Koning", "de Lange", "van der Linden", "Meyer Meijer", "van der Meer", "mes = knife (maker) Mesman", "Meulenbelt", "van der Molen", "Muis", "Molenaar Mulder", "Maarschalkerweerd", "Peters", "Prins", "Ruys Ruis", "Rynsburger", "Smits Smit", "Spaans", "Stegenga", "Teuling", "Tuinstra", "Vinke", "Visser", "van Vliet", "de Vries", "Vos", "Vroom", "de Wees", "van der Westhuizen", "Willemsen Willems", "de Wit"];
+				this.$refs.card.$el.classList.remove("move-enter-active");
+				this.$refs.card.$el.classList.remove("move-enter");
+				this.$refs.card.$el.classList.add("move-leave-active");
+				this.$refs.card.$el.classList.add("move-leave");
+				this.request.name = firstNames[Math.floor(Math.random() * firstNames.length)] + " " + lastNames[Math.floor(Math.random() * lastNames.length)];
+				this.request.time = (parseInt(Math.random()*10) || 9) + [" am", " pm"][Math.floor(Math.random() * 2)] + [" today", " tomorrow"][Math.floor(Math.random() * 2)];
+				this.request.distance = ([0, 1, 2][Math.floor(Math.random() * 3)] || "") + parseInt(Math.random()*10) + " km";
+				let n = parseInt(Math.random()*100);
+				this.request.leaveIn = n > 60 ? n - 60 : n;
+				let a = 51.439589, b = 5.469528;
+				a += Math.random()*100/1000, b += Math.random()*100/1000;
+				this.center.lat = a;
+				this.center.lng = b;
+				this.center2.lat = a + 0.0205;
+				this.center2.lng = b;
+				this.imageURL = "/cluttered/cluttered-" + image + ".jpg";
+			},
+			updateRequest() {
+				image++;
 				this.$refs.card.$el.classList.add("move-enter-active");
 				this.$refs.card.$el.classList.add("move-enter");
 				setTimeout(() => {
-					this.$refs.card.$el.classList.remove("move-enter-active");
-					this.$refs.card.$el.classList.remove("move-enter");
-					this.$refs.card.$el.classList.add("move-leave-active");
-					this.$refs.card.$el.classList.add("move-leave");
-					this.request.name = firstNames[Math.floor(Math.random() * firstNames.length)] + " " + lastNames[Math.floor(Math.random() * lastNames.length)];
-					this.request.time = (parseInt(Math.random()*10) || 9) + [" am", " pm"][Math.floor(Math.random() * 2)] + [" today", " tomorrow"][Math.floor(Math.random() * 2)];
-					this.request.distance = ([0, 1, 2][Math.floor(Math.random() * 3)] || "") + parseInt(Math.random()*10) + " km";
-					let n = parseInt(Math.random()*100);
-					this.request.leaveIn = n > 60 ? n - 60 : n;
-					let a = 51.439589, b = 5.469528;
-					a += Math.random()*100/1000, b += Math.random()*100/1000;
-					this.center.lat = a;
-					this.center.lng = b;
-					this.center2.lat = a + 0.0205;
-					this.center2.lng = b;
+					this.changeValues();
 					setTimeout(() => {
 						this.$refs.card.$el.classList.remove("move-leave-active");
 						this.$refs.card.$el.classList.remove("move-leave");
