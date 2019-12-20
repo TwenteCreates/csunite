@@ -1,3 +1,39 @@
-# csu
+![CSUnite](/csunite-logo.png)
 
-This repo contains the PWA Mohit and I built for CSU's first hackathon in Eindhoven. We ended up winning.
+CSUnite is a hyperlocal cleaning services app built at the CSU hackathon in Eindhoven.
+
+**🥇 Award**: Overall winner with a €2,500 award
+
+[**Read case study →**](https://anandchowdhary.com/projects/csunite)
+
+## 💻 Demo
+
+![CSUnite screenshot](/csunite-screenshot.png)
+
+The demo was last updated in March 2018, so some APIs might not be online anymore. [View live demo →](https://bit.ly/csu-utwente)
+
+## 🛠️ Development
+
+To build the app, first install dependencies:
+
+```
+npm install
+```
+
+Run the frontend on http://localhost:3000:
+
+```
+npm run dev
+```
+
+Firebase is used to deploy the frontend to https://bit.ly/csu-utwente, built using:
+
+```
+npm run generate
+```
+
+## 📄 License
+
+- Code: [MIT](/LICENSE)
+- Logo and assets: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
+
