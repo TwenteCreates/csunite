@@ -32,6 +32,10 @@ Firebase is used to deploy the frontend to https://bit.ly/csu-utwente, built usi
 npm run generate
 ```
 
+## 👥 Contributors
+
+[![Profile pictures of contributors on GitHub](https://services.anandchowdhary.now.sh/api/github-contributors?repo=c-r-e-a-t-e/csunite)](https://github.com/c-r-e-a-t-e/csunite/graphs/contributors)
+
 ## 📄 License
 
 - Code: [MIT](/LICENSE)
